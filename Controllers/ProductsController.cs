@@ -29,5 +29,10 @@ namespace CleanArchitectureDemo.Controllers
             var id = await _mediator.Send(command);
             return Ok(id);
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult>Delete(int id)
+        {
+            return Ok();
+        }
     }
 }
